@@ -20,4 +20,4 @@ class UserManager:
     def count_total_users(users):
         
         return len(users)
-    #ajout de commentaire pour test de commit
+    
