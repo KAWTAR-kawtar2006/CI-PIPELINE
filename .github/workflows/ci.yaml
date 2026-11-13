@@ -25,7 +25,7 @@ jobs:
           flake8 app --count --max-complexity=10 --max-line-length=127 --statistics
           flake8 tests --count --max-line-length=127 --statistics
       - name: executer pytest
-        run: pytest -m pytest tests/ -v --cov=app
+        run: python -m pytest tests/ -v --cov=app
   test:
     needs: lint
     runs-on: ubuntu-latest
@@ -38,4 +38,4 @@ jobs:
       - name: installer les dependances
         run: pip install -r requirements.txt
       - name: executer pytest
-        run: pytest -m pytest tests/ -v --cov=app
+        run: python -m pytest tests/ -v --cov=app
